@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Order Tracker - Shri Kirana & General Store</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f6f6f6;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .container {
+            max-width: 700px;
+            margin: 40px auto;
+            background: #fff;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+        
+        h1 {
+            text-align: center;
+            margin-bottom: 10px;
+            color: #333;
+        }
+        
+        p {
+            text-align: center;
+            color: #666;
+            font-size: 15px;
+        }
+        
+        .track-box {
+            margin-top: 25px;
+        }
+        
+        input {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            font-size: 15px;
+            margin-bottom: 12px;
+        }
+        
+        button {
+            width: 100%;
+            padding: 12px;
+            background: #f59e0b;
+            border: none;
+            color: white;
+            font-size: 16px;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+        
+        button:hover {
+            background: #e68905;
+        }
+        
+        .status-box {
+            margin-top: 25px;
+            padding: 15px;
+            background: #fafafa;
+            border-radius: 8px;
+            border: 1px solid #e5e5e5;
+            display: none;
+        }
+        
+        .step {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 10px;
+        }
+        
+        .circle {
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            background: #ccc;
+        }
+        
+        .active {
+            background: #f59e0b !important;
+        }
+        
+        .step span {
+            font-size: 14px;
+            color: #444;
+        }
+        
+        .success {
+            text-align: center;
+            margin-top: 10px;
+            color: green;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>Order Tracker</h1>
+        <p>Enter your Order ID to check the current status of your delivery.</p>
+
+        <div class="track-box">
+            <input type="text" id="orderId" placeholder="Enter Order ID (e.g. #SK1023)" />
+            <button onclick="trackOrder()">Track Order</button>
+        </div>
+
+        <div id="statusBox" class="status-box">
+            <h3>Order Status</h3>
+            <div class="step">
+                <div class="circle" id="step1"></div> <span>Order Placed</span></div>
+            <div class="step">
+                <div class="circle" id="step2"></div> <span>Packed</span></div>
+            <div class="step">
+                <div class="circle" id="step3"></div> <span>Out for Delivery</span></div>
+            <div class="step">
+                <div class="circle" id="step4"></div> <span>Delivered</span></div>
+            <p id="finalMsg" class="success"></p>
+        </div>
+    </div>
+
+    <script>
+        function trackOrder() {
+            const orderId = document.getElementById("orderId").value.trim();
+            const statusBox = document.getElementById("statusBox");
+            const finalMsg = document.getElementById("finalMsg");
+
+            // Reset
+            finalMsg.innerText = "";
+            document.querySelectorAll('.circle').forEach(c => c.classList.remove('active'));
+
+            if (orderId === "") {
+                alert("Please enter an Order ID.");
+                return;
+            }
+
+            // Simple fake tracking logic
+            const steps = ["step1", "step2", "step3", "step4"];
+            const progress = Math.floor(Math.random() * 4) + 1; // Random progress 1–4
+
+            for (let i = 0; i < progress; i++) {
+                document.getElementById(steps[i]).classList.add('active');
+            }
+
+            if (progress === 4) finalMsg.innerText = "Your Order Has Been Delivered ✔";
+
+            statusBox.style.display = "block";
+        }
+    </script>
+
+</body>
+
+</html>

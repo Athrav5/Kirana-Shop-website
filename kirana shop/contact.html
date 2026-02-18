@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us - Shri Kirana & General Store</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f7f7f7;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 40px auto;
+            background: #ffffff;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+        
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        
+        p {
+            text-align: center;
+            color: #555;
+        }
+        
+        .contact-box {
+            margin-top: 25px;
+        }
+        
+        .info {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            margin-bottom: 25px;
+        }
+        
+        .info div {
+            width: 48%;
+            background: #fafafa;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #e5e5e5;
+        }
+        
+        .info div h3 {
+            margin: 0 0 8px;
+            color: #444;
+        }
+        
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+        
+        input,
+        textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            font-size: 15px;
+        }
+        
+        button {
+            padding: 12px;
+            background: #f59e0b;
+            border: none;
+            color: #fff;
+            border-radius: 6px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        
+        button:hover {
+            background: #e68905;
+        }
+        
+        @media (max-width: 600px) {
+            .info div {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>Contact Us</h1>
+        <p>We’re here to help you! Reach out to us for orders, enquiries or support.</p>
+
+        <div class="contact-box">
+
+            <div class="info">
+                <div>
+                    <h3>Phone</h3>
+                    <p>+91 98765 43210</p>
+                </div>
+                <div>
+                    <h3>Email</h3>
+                    <p>shrikirana@example.com</p>
+                </div>
+                <div>
+                    <h3>Address</h3>
+                    <p>123, MG Road, Near Patel Chowk, Your City</p>
+                </div>
+                <div>
+                    <h3>Store Timings</h3>
+                    <p>8:00 AM to 9:00 PM (Daily)</p>
+                </div>
+            </div>
+
+            <form>
+                <input type="text" placeholder="Your Name" required />
+                <input type="email" placeholder="Your Email" required />
+                <textarea rows="5" placeholder="Your Message" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>

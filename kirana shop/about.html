@@ -1,0 +1,351 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>About Us — Aaradhaya Kirana & General Store</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+         :root {
+            --bg: #fff6ea;
+            --accent: #f59e0b;
+            --muted: #6b7280;
+            --card: #ffffff;
+            --glass: rgba(255, 255, 255, 0.6);
+            --max-width: 1100px;
+            --radius: 18px;
+        }
+        
+        * {
+            box-sizing: border-box
+        }
+        
+        body {
+            margin: 0;
+            font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+            background: linear-gradient(180deg, var(--bg) 0%, #fff 60%);
+            color: #0f172a;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            line-height: 1.5;
+            padding: 32px 20px;
+            display: flex;
+            justify-content: center;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: var(--max-width);
+        }
+        
+        header {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+            margin-bottom: 28px;
+        }
+        
+        .logo {
+            width: 84px;
+            height: 84px;
+            border-radius: 16px;
+            background: linear-gradient(135deg, var(--accent), #fb923c);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 700;
+            font-size: 22px;
+            box-shadow: 0 6px 20px rgba(15, 23, 42, 0.08);
+        }
+        
+        h1 {
+            margin: 0;
+            font-size: 28px
+        }
+        
+        p.lead {
+            margin: 6px 0 0;
+            color: var(--muted)
+        }
+        
+        .grid {
+            display: grid;
+            grid-template-columns: 1fr 360px;
+            gap: 22px;
+            align-items: start;
+        }
+        /* Main card */
+        
+        .card {
+            background: var(--card);
+            border-radius: var(--radius);
+            padding: 28px;
+            box-shadow: 0 8px 30px rgba(15, 23, 42, 0.06);
+        }
+        
+        .hero {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+        }
+        
+        .hero img {
+            width: 140px;
+            height: 140px;
+            border-radius: 12px;
+            object-fit: cover;
+            flex-shrink: 0;
+            box-shadow: 0 6px 18px rgba(15, 23, 42, 0.06)
+        }
+        
+        .kira-info h2 {
+            margin: 0 0 6px
+        }
+        
+        .kira-info p {
+            margin: 0;
+            color: var(--muted)
+        }
+        
+        .section {
+            margin-top: 20px
+        }
+        
+        .section h3 {
+            margin: 0 0 10px;
+            font-size: 18px
+        }
+        
+        .values {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap
+        }
+        
+        .value {
+            background: var(--glass);
+            padding: 12px;
+            border-radius: 12px;
+            min-width: 140px
+        }
+        
+        .value h4 {
+            margin: 0 0 6px;
+            font-size: 14px
+        }
+        
+        .value p {
+            margin: 0;
+            color: var(--muted);
+            font-size: 14px
+        }
+        
+        .features {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 12px
+        }
+        
+        .feature {
+            background: #fff;
+            border-radius: 12px;
+            padding: 12px;
+            border: 1px solid rgba(15, 23, 42, 0.04)
+        }
+        
+        .contact-card {
+            position: sticky;
+            top: 28px
+        }
+        
+        .contact-card .card {
+            padding: 18px
+        }
+        
+        .badge {
+            display: inline-block;
+            padding: 8px 12px;
+            border-radius: 999px;
+            background: linear-gradient(90deg, var(--accent), #fb923c);
+            color: white;
+            font-weight: 600;
+            font-size: 13px
+        }
+        
+        .contact-list {
+            margin-top: 12px;
+            display: flex;
+            flex-direction: column;
+            gap: 8px
+        }
+        
+        .contact-item {
+            display: flex;
+            gap: 10px;
+            align-items: center
+        }
+        
+        .contact-item strong {
+            min-width: 85px
+        }
+        
+        footer {
+            margin-top: 22px;
+            padding: 18px;
+            border-radius: 12px;
+            background: linear-gradient(180deg, rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.4));
+            display: flex;
+            justify-content: space-between;
+            align-items: center
+        }
+        
+        .socials {
+            display: flex;
+            gap: 8px
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 10px 14px;
+            border-radius: 10px;
+            background: transparent;
+            border: 1px solid rgba(15, 23, 42, 0.06);
+            font-weight: 600
+        }
+        /* Responsive */
+        
+        @media (max-width:880px) {
+            .grid {
+                grid-template-columns: 1fr
+            }
+            .hero {
+                flex-direction: row
+            }
+            .contact-card {
+                position: relative;
+                top: auto
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">SK</div>
+            <div>
+                <h1>Aaradhaya Kirana &amp; General Store</h1>
+                <p class="lead">Family-owned since 1998 — fresh groceries, friendly service, and neighbourhood smiles.</p>
+            </div>
+        </header>
+
+        <div class="grid">
+            <main>
+                <article class="card">
+                    <div class="hero">
+                        <img src="https://images.unsplash.com/photo-1601004890684-d8cbf643f5f2?auto=format&fit=crop&w=800&q=60" alt="Kirana shop interior">
+                        <div class="kira-info">
+                            <h2>About Our Shop</h2>
+                            <p>Aaradhaya Kirana began as a small pavement store and has grown into a trusted neighbourhood shop. We source fresh staples daily — grains, spices, produce and household essentials — with a focus on value, quality, and convenience.</p>
+                        </div>
+                    </div>
+
+                    <section class="section">
+                        <h3>Our Mission</h3>
+                        <p>To make everyday essentials accessible and affordable while giving personal service that big stores cannot match. We aim to be the corner-store you can rely on — for daily groceries, quick deliveries and friendly advice.</p>
+                    </section>
+
+                    <section class="section">
+                        <h3>Core Values</h3>
+                        <div class="values">
+                            <div class="value">
+                                <h4>Freshness & Quality</h4>
+                                <p>Daily procurement and careful selection so you get the best every time.</p>
+                            </div>
+                            <div class="value">
+                                <h4>Trust</h4>
+                                <p>Transparent weights, honest pricing, and fair returns — always.</p>
+                            </div>
+                            <div class="value">
+                                <h4>Community</h4>
+                                <p>We support local producers and are active in neighbourhood events.</p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="section">
+                        <h3>What We Offer</h3>
+                        <div class="features">
+                            <div class="feature">
+                                <strong>Daily groceries</strong>
+                                <p class="muted">Rice, dals, flours, cooking oil and spices — trusted brands and local favourites.</p>
+                            </div>
+                            <div class="feature">
+                                <strong>Fresh produce</strong>
+                                <p class="muted">Seasonal fruits & vegetables sourced from nearby markets each morning.</p>
+                            </div>
+                            <div class="feature">
+                                <strong>Household essentials</strong>
+                                <p class="muted">Cleaning supplies, toiletries and everyday home needs.</p>
+                            </div>
+                            <div class="feature">
+                                <strong>Home delivery</strong>
+                                <p class="muted">Quick delivery in the local area — call or WhatsApp your order.</p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="section">
+                        <h3>Our Story — A Short Timeline</h3>
+                        <ul>
+                            <li><strong>1998:</strong> Aaradhaya Kirana opens as a small family shop.</li>
+                            <li><strong>2008:</strong> Expanded to a larger space, introduced more fresh produce.</li>
+                            <li><strong>2019:</strong> Started neighbourhood delivery and bulk discounts.</li>
+                        </ul>
+                    </section>
+                </article>
+
+                <footer>
+                    <div>
+                        <div style="font-weight:700">Visit Us</div>
+                        <div style="color:var(--muted)">Rui,Bajartal Chowk — Open 8:00 AM to 9:00 PM</div>
+                    </div>
+                    <div class="socials">
+                        <a class="btn" href="#">Call</a>
+                        <a class="btn" href="#">WhatsApp</a>
+                    </div>
+                </footer>
+            </main>
+
+            <aside class="contact-card">
+                <div class="card">
+                    <div class="badge">Family Owned</div>
+                    <h3 style="margin-top:12px;margin-bottom:6px">Contact & Hours</h3>
+                    <div class="contact-list">
+                        <div class="contact-item"><strong>Phone:</strong> <span>+91 98765 43210</span></div>
+                        <div class="contact-item"><strong>Email:</strong> <span>Aaradhayakirana@example.com</span></div>
+                        <div class="contact-item"><strong>Hours:</strong> <span>8:00 AM — 9:00 PM (Daily)</span></div>
+                        <div class="contact-item"><strong>Delivery:</strong> <span>Local — within 5 km</span></div>
+                    </div>
+
+                    <div style="margin-top:12px">
+                        <h4 style="margin:6px 0">Quick Links</h4>
+                        <div style="display:flex;flex-direction:column;gap:8px">
+                            <a class="btn" href="#">Place Order</a>
+                            <a class="btn" href="#">Our Products</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div style="margin-top:12px;text-align:center;font-size:13px;color:var(--muted)">We accept cash, UPI and card payments.</div>
+            </aside>
+
+        </div>
+    </div>
+</body>
+
+</html>
